@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Varela");
+@import url("https://fonts.googleapis.com/css?family=Della+Respira");
+@import url("https://fonts.googleapis.com/css?family=Proza+Libre:400,400i,500,500i,600,600i,700,700i,800,800i");
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600");
+/*
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Work Sans', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Oxygen', sans-serif;
+font-family: 'Cabin', sans-serif;
+font-family: 'Cantarell', sans-serif;
+font-family: 'Hind Madurai', sans-serif;
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Barlow', sans-serif;
+font-family: 'Pontano Sans', sans-serif;
+font-family: 'Spinnaker', sans-serif; // 
+font-family: 'Jaldi', sans-serif;
+font-family: 'Allerta', sans-serif;
+font-family: 'Nobile', sans-serif;
+font-family: 'Tenor Sans', sans-serif;
+font-family: 'Gothic A1', sans-serif;
+font-family: 'Palanquin', sans-serif;
+font-family: 'Carrois Gothic', sans-serif;
+font-family: 'Voltaire', sans-serif;
+font-family: 'Rosario', sans-serif;
+font-family: 'Palanquin Dark', sans-serif;
+font-family: 'Federo', sans-serif;
+font-family: 'Imprima', sans-serif;
+font-family: 'Kosugi', sans-serif;
+font-family: 'Ramabhadra', sans-serif;
+font-family: 'Pavanam', sans-serif;
+font-family: 'Mandali', sans-serif;
+font-family: 'Arya', sans-serif;
+font-family: 'Tenali Ramakrishna', sans-serif; */
+body {
+  color: rgba(0, 0, 0, 0.72);
+  font-family: "Gothic A1", sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 900;
+}
+
+h2 {
+  background: rgba(0, 0, 0, 0.87);
+  color: white;
+  display: inline-block;
+  padding: 0.14em 1em 0 2em;
+  margin-left: -2em;
+}
+
+h4 {
+  margin-bottom: 0.3em;
+  font-size: 20px;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  vertical-align: bottom;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page__header navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  background: #f9f9f9;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.17);
+  position: relative;
+  z-index: 99;
+}
+.page__header navbar .brand .page__title {
+  margin: 0;
+  letter-spacing: -0.07em;
+  font-size: 27px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.87);
+  position: relative;
+  top: 2px;
+}
+.page__header navbar .brand .page__title small {
+  font-weight: 300;
+  font-size: 12px;
+  background: #ff5500;
+  /* border-radius: 50px; */
+  padding: 0.3em 1em 0.25em;
+  color: white;
+  margin-left: 0.9em;
+  position: relative;
+  top: 12px;
+  letter-spacing: -0.01em;
+  border-radius: 2px;
+}
+.page__header navbar .navbar__drawer-toggle {
+  background: transparent;
+  border: 0;
+  padding: 1.5em 0;
+  margin: 0;
+  outline: 0;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines {
+  margin-left: auto;
+  direction: rtl;
+  width: 35px;
+  cursor: pointer;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #ff5500;
+  border-radius: 50px;
+  transition: all 600ms ease;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:not(:last-child) {
+  margin-bottom: 0.35rem;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1) {
+  width: 14px;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1):after {
+  left: -19px;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2) {
+  width: 8px;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2):after {
+  left: -13px;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3) {
+  width: 22px;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3):after {
+  left: -27px;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines span:after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #ff5500;
+  border-radius: 50%;
+  position: relative;
+  left: -30px;
+  transition: all 400ms ease;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span {
+  width: 30px;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(1):after {
+  width: 16px;
+  border-radius: 50px;
+  left: 0px;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(2):after {
+  width: 22px;
+  border-radius: 50px;
+  left: 0;
+}
+.page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(3):after {
+  width: 8px;
+  border-radius: 50px;
+  left: 0;
+}
+.page__header navbar .navbar__drawer {
+  display: none;
+  position: absolute;
+  width: 100%;
+  bottom: -67px;
+  background: white;
+  left: 0;
+}
+
+
+.hero-intro {
+  background: linear-gradient(45deg, #5B544E, #A49087);
+  color: white;
+  padding: 4em;
+  display: flex;
+  justify-content: space-between;
+  padding: 4em;
+  display: flex;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: 50% 0;
+}
+.hero-intro__right .open-dates {
+  margin-bottom: 2em;
+}
+.hero-intro__right .open-dates p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.hero-intro__right .open-dates p:last-child {
+  color: rgba(255, 255, 255, 0.7);
+}
+.hero-intro__right .open-dates p:after {
+  content: "";
+  display: block;
+  width: 100%;
+  background: rgba(166, 166, 166, 0.5);
+  border-radius: 50px;
+  position: absolute;
+  height: 9px;
+  top: 15px;
+  z-index: -1;
+}
+.hero-intro__right .museum-shop-link {
+  color: white;
+  text-decoration: none;
+  padding: 1em 3.2em 1em 2em;
+  font-weight: 500;
+  font-size: 15px;
+  background: #ff5500;
+  transition: all 200ms ease;
+  position: relative;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+}
+.hero-intro__right .museum-shop-link svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  right: 21px;
+  transition: all 200ms ease;
+}
+.hero-intro__right .museum-shop-link:hover {
+  background: #222;
+  color: white;
+}
+.hero-intro__right .museum-shop-link:hover svg {
+  fill: white;
+}
+.hero-intro__right blockquote {
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  position: relative;
+}
+.hero-intro__right blockquote p {
+  margin: 0;
+  font-size: 14px;
+  width: 180px;
+  position: relative;
+}
+.hero-intro__left img {
+  /* width: 340px;
+  height: 320px; */
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+  border-radius: 61% 39% 64% 36%/40% 64% 36% 60%;
+  box-shadow: 0 15px 60px -20px black;
+  border: 10px solid #d6d0cd;
+  mix-blend-mode: overlay;
+}
+
+.page__content section {
+  padding: 70px 0;
+}
+.page__content section .container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.page__content section .container .slider-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.page__content section .container .slider-wrapper article {
+  margin-right: 2em;
+}
+.page__content section .container .slider-wrapper article figure {
+  background: #f50;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border-top: 4px solid #f50;
+}
+.page__content section .container .slider-wrapper article figure img {
+  width: 270px;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px 7px 0 0;
+}
+.page__content section .container .slider-wrapper article figure figcaption a {
+  display: block;
+  color: white;
+  padding: 1em;
+  border-top: 6px solid #333;
+  background: #f50;
+}
+
+.page__footer {
+  background: #222;
+  color: #e2e9e2;
+  padding: 2em 3em;
+  display: flex;
+  justify-content: space-between;
+  border-top: 6px solid #a6a6a6;
+  margin-top: 3rem;
+}

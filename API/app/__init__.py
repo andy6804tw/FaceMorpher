@@ -2,13 +2,13 @@
 import config
 from flask import Flask,request,render_template
 from flask_cors import CORS
-from app.controllers.swap import swap 
+from app.controllers.morph import morph 
 
 app=Flask(__name__)
 CORS(app)
 app.config.from_object(config)
 
-app.register_blueprint(swap, url_prefix='/swap')
+app.register_blueprint(morph, url_prefix='/morph')
 
 @app.route('/test', methods=['GET'])
 def home():

@@ -4,20 +4,20 @@ from flask import Blueprint, request,jsonify,redirect
 
 import app.modules.morph as morphModule
 
-swap = Blueprint('swap',__name__)
+morph = Blueprint('morph',__name__)
   
 
-@swap.route('', methods=['GET','POST'])
+@morph.route('', methods=['GET','POST'])
 def add():
   if request.method == 'GET':
-    return jsonify({'result': str(imageSwap.i2iSwap(''))})
+    return jsonify({'result': 'call GET from /morph'})
   else:
     insertValues = request.get_json()
     image1=insertValues['image1']
     image2=insertValues['image2']
     return jsonify({'result':morphModule.getResult(),'image1':image1,'image2':image2})
 
-@swap.route('/show')
+@morph.route('/show')
 def show():
   return redirect('API/FaceSwap/video/out.avi')
   

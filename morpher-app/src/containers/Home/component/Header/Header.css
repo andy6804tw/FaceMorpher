@@ -1,0 +1,110 @@
+.page__header navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    box-shadow: 0 25px 30px -25px rgba(0, 0, 0, 0.17);
+    position: relative;
+    z-index: 99;
+  }
+  .page__header navbar .brand .page__title {
+    margin: 0;
+    letter-spacing: -0.07em;
+    font-size: 27px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.87);
+    position: relative;
+    top: 2px;
+  }
+  .page__header navbar .brand .page__title small {
+    font-weight: 300;
+    font-size: 12px;
+    background: #ff5500;
+    /* border-radius: 50px; */
+    padding: 0.3em 1em 0.25em;
+    color: white;
+    margin-left: 0.9em;
+    position: relative;
+    top: 12px;
+    letter-spacing: -0.01em;
+    border-radius: 2px;
+  }
+  .page__header navbar .navbar__drawer-toggle {
+    background: transparent;
+    border: 0;
+    padding: 1.5em 0;
+    margin: 0;
+    outline: 0;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines {
+    margin-left: auto;
+    direction: rtl;
+    width: 35px;
+    cursor: pointer;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #ff5500;
+    border-radius: 50px;
+    transition: all 600ms ease;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span:not(:last-child) {
+    margin-bottom: 0.35rem;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1) {
+    width: 14px;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(1):after {
+    left: -19px;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2) {
+    width: 8px;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(2):after {
+    left: -13px;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3) {
+    width: 22px;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span:nth-child(3):after {
+    left: -27px;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines span:after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: #ff5500;
+    border-radius: 50%;
+    position: relative;
+    left: -30px;
+    transition: all 400ms ease;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span {
+    width: 30px;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(1):after {
+    width: 16px;
+    border-radius: 50px;
+    left: 0px;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(2):after {
+    width: 22px;
+    border-radius: 50px;
+    left: 0;
+  }
+  .page__header navbar .navbar__drawer-toggle .menu-icon-lines:hover span:nth-child(3):after {
+    width: 8px;
+    border-radius: 50px;
+    left: 0;
+  }
+  .page__header navbar .navbar__drawer {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: -67px;
+    background: white;
+    left: 0;
+  }

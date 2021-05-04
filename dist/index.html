@@ -1,61 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>CodePen - Eng Ayman Abdulrahim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
-<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Gothic+A1:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+  <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<header class="page__header">
-  <navbar>
-    <div class="brand">
-      <h1 class="page__title">Face Morph<small>Morph 2 Faces</small></h1>
-    </div>
-    <button class="navbar__drawer-toggle"> 
-      <div class="menu-icon-lines"><span></span><span></span><span></span></div>
-    </button>
-  </navbar>
-</header>
-<div class="hero-intro">  
-  <div class="hero-intro__right">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-12 col-sm-8 col-md-8">
-        <blockquote> 
-          <q>The face morphing algorithm morphs between faces using a common set of feature points, placed by hand on each face. To morph between two faces, you need to warp both faces to a common shape so they can be blended together.</q>
-        </blockquote>
+  <!-- partial:index.partial.html -->
+  <header class="page__header">
+    <navbar class="px-1 px-md-5">
+      <div class="brand">
+        <h1 class="page__title">Face Morph<small>Morph 2 Faces</small></h1>
       </div>
-      <div class="col-8 col-sm-4 col-md-3 my-3">
-        <div class="hero-intro__left"> <img src="./image/demo.gif"/></div>
+      <button class="navbar__drawer-toggle">
+        <div class="menu-icon-lines"><span></span><span></span><span></span></div>
+      </button>
+    </navbar>
+  </header>
+  <!-- Hero -->
+  <!-- Visible only on xl 、 lg and md  -->
+  <section class="d-none d-xl-block d-lg-block d-md-block">
+    <div class="hero-intro p-5">
+      <div class="hero-intro__right">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-sm-8 col-md-8">
+            <blockquote>
+              <q>The face morphing algorithm morphs between faces using a common set of feature points, placed by hand on
+                each face. To morph between two faces, you need to warp both faces to a common shape so they can be
+                blended together.</q>
+            </blockquote>
+            <div class="open-dates">
+              <p>Morphing your face!</p><br />
+            </div><a class="museum-shop-link" href="#">Get started
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300px" width="300px"
+                viewBox="0 0 100 100" version="1.1" x="0px" y="0px">
+                <g>
+                  <g>
+                    <path
+                      d="M68.232233,61.767767 C69.2085438,62.7440777 70.7914562,62.7440777 71.767767,61.767767 C72.7440777,60.7914562 72.7440777,59.2085438 71.767767,58.232233 L51.767767,38.232233 C50.7914562,37.2559223 49.2085438,37.2559223 48.232233,38.232233 L28.232233,58.232233 C27.2559223,59.2085438 27.2559223,60.7914562 28.232233,61.767767 C29.2085438,62.7440777 30.7914562,62.7440777 31.767767,61.767767 L49.9997921,43.5357418 L68.232233,61.767767 Z"
+                      transform="translate(50.000000, 50.000000) rotate(90.000000) translate(-50.000000, -50.000000) "></path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="col-8 col-sm-4 col-md-4 col-lg-3  col-xl-2 my-3">
+            <div class="hero-intro__left"> <img id="heroImg" src="./image/demo2.gif" /></div>
+          </div>
+        </div>
       </div>
     </div>
-    
-    <div class="open-dates">
-      <p>Morphing your face!</p><br/>
-    </div><a class="museum-shop-link" href="#">Get started 
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300px" width="300px" viewBox="0 0 100 100" version="1.1" x="0px" y="0px">
-        <g>
-          <g>
-            <path d="M68.232233,61.767767 C69.2085438,62.7440777 70.7914562,62.7440777 71.767767,61.767767 C72.7440777,60.7914562 72.7440777,59.2085438 71.767767,58.232233 L51.767767,38.232233 C50.7914562,37.2559223 49.2085438,37.2559223 48.232233,38.232233 L28.232233,58.232233 C27.2559223,59.2085438 27.2559223,60.7914562 28.232233,61.767767 C29.2085438,62.7440777 30.7914562,62.7440777 31.767767,61.767767 L49.9997921,43.5357418 L68.232233,61.767767 Z" transform="translate(50.000000, 50.000000) rotate(90.000000) translate(-50.000000, -50.000000) "></path>
-          </g>
-        </g>
-      </svg></a>
-  </div>
-  
-</div>
-<main class="page__content">
-  <section style="height: 800px; background-color: antiquewhite;">
   </section>
-</main>
-<footer class="page__footer">
-  test
-</footer>
+   <!-- Visible only on sm  -->
+   <section class="d-md-none">
+    <div class="hero-intro py-5 px-3 px-sm-5">
+      <div class="hero-intro__right">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12">
+            <blockquote>
+              <q>The face morphing algorithm morphs between faces using a common set of feature points, placed by hand on
+                each face. To morph between two faces, you need to warp both faces to a common shape so they can be
+                blended together.</q>
+            </blockquote>
+          </div>
+          <div class="col-12 mt-2">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-7 col-sm-6 text-center">
+                <div class="open-dates">
+                  <p>Morphing your face!</p><br />
+                </div><a class="museum-shop-link" href="#">Get started
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300px" width="300px"
+                    viewBox="0 0 100 100" version="1.1" x="0px" y="0px">
+                    <g>
+                      <g>
+                        <path
+                          d="M68.232233,61.767767 C69.2085438,62.7440777 70.7914562,62.7440777 71.767767,61.767767 C72.7440777,60.7914562 72.7440777,59.2085438 71.767767,58.232233 L51.767767,38.232233 C50.7914562,37.2559223 49.2085438,37.2559223 48.232233,38.232233 L28.232233,58.232233 C27.2559223,59.2085438 27.2559223,60.7914562 28.232233,61.767767 C29.2085438,62.7440777 30.7914562,62.7440777 31.767767,61.767767 L49.9997921,43.5357418 L68.232233,61.767767 Z"
+                          transform="translate(50.000000, 50.000000) rotate(90.000000) translate(-50.000000, -50.000000) "></path>
+                      </g>
+                    </g>
+                  </svg></a>
+              </div>
+              <div class="col-5 col-sm-4  text-center">
+                <div class="hero-intro__left"> <img id="heroImg" src="./image/demo2.gif" /></div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+
+  
+  <main class="page__content" style="height: 800px; background-color: antiquewhite;">
+    <section>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="page__footer">
+    <p class="copy">
+      <a href="https://github.com/andy6804tw" target="_balnk" style="color: white;">
+        <img src="https://i.imgur.com/EB1gIIe.png" alt="" srcset="" style="width: 16px;"></a> &nbsp; made
+      with ❤️ coding
+    </p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
+
 </html>

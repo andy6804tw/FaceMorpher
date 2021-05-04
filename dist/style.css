@@ -75,9 +75,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2em;
   background: #f9f9f9;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 40px 30px -30px rgba(0, 0, 0, 0.17);
   position: relative;
   z-index: 99;
 }
@@ -187,10 +186,8 @@ a {
 .hero-intro {
   background: linear-gradient(45deg, #5B544E, #A49087);
   color: white;
-  padding: 4em;
   display: flex;
   justify-content: space-between;
-  padding: 4em;
   display: flex;
   justify-content: space-between;
   background-size: cover;
@@ -318,9 +315,28 @@ a {
 .page__footer {
   background: #222;
   color: #e2e9e2;
-  padding: 2em 3em;
+  padding: 1.5em 2em;
   display: flex;
   justify-content: space-between;
   border-top: 6px solid #a6a6a6;
-  margin-top: 3rem;
 }
+.copy{
+  font-size:12px;
+  text-align:center;
+  color: white;
+  font-weight: 300;
+  width: 100%;
+  margin: auto;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .hero-intro__right blockquote, .hero-intro__right .open-dates p {
+    font-size: 16px;
+  }
+  .hero-intro__right .museum-shop-link {
+    font-size: 14px;
+    /* padding: 1em 4.2em 1em 2em; */
+  }
+ }

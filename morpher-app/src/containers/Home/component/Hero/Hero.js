@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Hero.css';
-import myimg from './image/demo1.gif';
 
 
 class Hero extends Component {

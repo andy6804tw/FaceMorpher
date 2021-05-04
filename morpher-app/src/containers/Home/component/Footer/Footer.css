@@ -1,0 +1,26 @@
+.page_footer {
+    background: #222;
+    color: #e2e9e2;
+    padding: 1.5em 2em;
+    display: flex;
+    justify-content: space-between;
+    border-top: 6px solid #a6a6a6;
+  }
+.page_footer img{
+  width: 16px;
+}
+.copy{
+  font-size:12px;
+  text-align:center;
+  color: white;
+  font-weight: 400;
+  width: 100%;
+  margin: auto;
+}
+.page_footer a{
+  transition: 0.3s;
+}
+.page_footer a:hover{
+  text-decoration:none;
+  color: #ffa982;
+}

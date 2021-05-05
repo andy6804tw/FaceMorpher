@@ -34,6 +34,8 @@ function Morph() {
         var dataObject = response.data;
         // POST success
         const filename = dataObject.filename;
+        const imgResult = dataObject.result.split("'")[1];
+        document.getElementById('imgResult').src = `data:image/jpg;base64,${imgResult}`;
         console.log(dataObject)
       },
         (error) => {
@@ -58,7 +60,7 @@ function Morph() {
         outputOptions={{ maxWidth: 254, maxHeight: 254 }}
         previewOptions={{ width: 254, height: 254 }}
       />
-
+      <img id="imgResult" alt="" />
       <button onClick={call}>Click</button>
     </div>
   );

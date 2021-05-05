@@ -150,12 +150,13 @@ def base64_cv2(base64_str):
     image = cv2.imdecode(nparr,cv2.IMREAD_COLOR)
     return image
 
-def image_to_video(insertValues):
+def image_to_video(insertValues, filename):
     # config
-    videoPath='app/static/test.mp4'
-    nframes=60
-    fps=30
+    videoPath='app/static/'+filename+'.gif'
+    nframes=8
+    fps=4
     writer = imageio.get_writer(videoPath, fps=fps)
+    # writer = imageio.get_writer(videoPath)
     # Read images
     if insertValues=='':
         img1 = cv2.imread('app/image/cat.jpg')
@@ -163,7 +164,10 @@ def image_to_video(insertValues):
     else:
         img1=base64_cv2(insertValues['image1'])
         img2=base64_cv2(insertValues['image2'])
-    
+    # Resize image
+    img1 = cv2.resize(img1, (254, 254), interpolation=cv2.INTER_AREA)
+    img2 = cv2.resize(img2, (254, 254), interpolation=cv2.INTER_AREA)
+
     # GET two image points
     resultTag1, img_landmark1, points1 = get_face_landmark(img1)
     resultTag2, img_landmark2, points2 = get_face_landmark(img2)

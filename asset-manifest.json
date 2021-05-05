@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/facemorpher/static/css/main.fd6e80bd.chunk.css",
-    "main.js": "/facemorpher/static/js/main.4e0804ce.chunk.js",
-    "main.js.map": "/facemorpher/static/js/main.4e0804ce.chunk.js.map",
-    "runtime-main.js": "/facemorpher/static/js/runtime-main.ad4e00cc.js",
-    "runtime-main.js.map": "/facemorpher/static/js/runtime-main.ad4e00cc.js.map",
-    "static/js/2.651c7600.chunk.js": "/facemorpher/static/js/2.651c7600.chunk.js",
-    "static/js/2.651c7600.chunk.js.map": "/facemorpher/static/js/2.651c7600.chunk.js.map",
-    "static/js/3.d6e757c8.chunk.js": "/facemorpher/static/js/3.d6e757c8.chunk.js",
-    "static/js/3.d6e757c8.chunk.js.map": "/facemorpher/static/js/3.d6e757c8.chunk.js.map",
-    "index.html": "/facemorpher/index.html",
-    "static/css/main.fd6e80bd.chunk.css.map": "/facemorpher/static/css/main.fd6e80bd.chunk.css.map",
-    "static/js/2.651c7600.chunk.js.LICENSE.txt": "/facemorpher/static/js/2.651c7600.chunk.js.LICENSE.txt",
-    "static/media/demo1.gif": "/facemorpher/static/media/demo1.6d53cd57.gif",
-    "static/media/demo2.gif": "/facemorpher/static/media/demo2.4f2b5e65.gif"
+    "main.css": "/FaceMorpher/static/css/main.fd6e80bd.chunk.css",
+    "main.js": "/FaceMorpher/static/js/main.4e0804ce.chunk.js",
+    "main.js.map": "/FaceMorpher/static/js/main.4e0804ce.chunk.js.map",
+    "runtime-main.js": "/FaceMorpher/static/js/runtime-main.95d398c9.js",
+    "runtime-main.js.map": "/FaceMorpher/static/js/runtime-main.95d398c9.js.map",
+    "static/js/2.651c7600.chunk.js": "/FaceMorpher/static/js/2.651c7600.chunk.js",
+    "static/js/2.651c7600.chunk.js.map": "/FaceMorpher/static/js/2.651c7600.chunk.js.map",
+    "static/js/3.d6e757c8.chunk.js": "/FaceMorpher/static/js/3.d6e757c8.chunk.js",
+    "static/js/3.d6e757c8.chunk.js.map": "/FaceMorpher/static/js/3.d6e757c8.chunk.js.map",
+    "index.html": "/FaceMorpher/index.html",
+    "static/css/main.fd6e80bd.chunk.css.map": "/FaceMorpher/static/css/main.fd6e80bd.chunk.css.map",
+    "static/js/2.651c7600.chunk.js.LICENSE.txt": "/FaceMorpher/static/js/2.651c7600.chunk.js.LICENSE.txt",
+    "static/media/demo1.gif": "/FaceMorpher/static/media/demo1.6d53cd57.gif",
+    "static/media/demo2.gif": "/FaceMorpher/static/media/demo2.4f2b5e65.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad4e00cc.js",
+    "static/js/runtime-main.95d398c9.js",
     "static/js/2.651c7600.chunk.js",
     "static/css/main.fd6e80bd.chunk.css",
     "static/js/main.4e0804ce.chunk.js"

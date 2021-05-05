@@ -8,13 +8,12 @@ export default
 class Main extends Component {
   render() {
     return (
-      // <Router>
-      //   <Switch>
-      //     <Route exact path="/" component={Home}/>
-      //     <Route path="*" component={NotFound}/>
-      //   </Switch>
-      // </Router>
-      <Home/>
+      <Router>
+        <Switch>
+          <Route exact path="/FaceMorpher/" component={Home}/>
+          <Route path="*" component={NotFound}/>
+        </Switch>
+      </Router>
     );
   }
 }

@@ -36,7 +36,6 @@ function Morph() {
         const filename = dataObject.filename;
         const imgResult = dataObject.result.split("'")[1];
         document.getElementById('imgResult').src = `data:image/jpg;base64,${imgResult}`;
-        console.log(dataObject)
       },
         (error) => {
           // var message = error.response.data.message;

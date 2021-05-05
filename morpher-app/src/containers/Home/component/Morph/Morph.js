@@ -20,6 +20,7 @@ function Morph() {
       console.log(document.getElementById('imgPreview_1').style)
       document.getElementById('imgPreview_1').style.backgroundImage = 'url(' + reader.result + ')';
       document.getElementById('imgPreview_1').setAttribute('data-text','');
+      document.getElementById('imgStatus_1').setAttribute('data-text','edit');
       // document.getElementById('imgPreview_1').style.setProperty('--content','');
       // document.getElementById('imgPreview_1').sheet.insertRule("#imgPreview_1::before{color:blue;}", 0);
     }
@@ -60,7 +61,7 @@ function Morph() {
         <div className="box m-5" onClick={() => fileRef_1.current.trigger()}>
           <div className="js--image-preview" data-text="photo_size_select_actual" id="imgPreview_1"></div>
           <div className="upload-options">
-            <label data-text="add"></label>
+            <label data-text="add" id="imgStatus_1"></label>
           </div>
         </div>
         <HiddenCropper

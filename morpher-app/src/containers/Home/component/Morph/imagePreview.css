@@ -42,6 +42,7 @@
     top: calc(50% - 1.75rem);
     left: calc(50% - 1rem);
     z-index: 0;
+    cursor: pointer;
   }
   
   .js--image-preview {
@@ -64,4 +65,5 @@
     top: calc(50% - 3rem);
     left: calc(50% - 2.25rem);
     z-index: 0;
+    cursor: pointer;
   }

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { ImageCropper } from "react-bootstrap-image-cropper";
+import { ImageCropper, HiddenCropper } from "react-bootstrap-image-cropper";
 import axios from 'axios';
 
 
@@ -12,10 +12,19 @@ function Morph() {
   const fileRef_1 = useRef();
   const fileRef_2 = useRef();
 
-  //   function handleChange_1(croppedFile) {
-  //     console.log(croppedFile);
-  //     console.log(fileRef.current);
-  //   }
+  function handleChange_1(croppedFile) {
+    console.log(fileRef_1.current);
+    let reader = new FileReader();
+
+    reader.onload = function() {
+      console.log(document.getElementById('imgPreview_1').style)
+      document.getElementById('imgPreview_1').style.backgroundImage = 'url(' + reader.result + ')';
+      document.getElementById('imgPreview_1').setAttribute('data-text','');
+      // document.getElementById('imgPreview_1').style.setProperty('--content','');
+      // document.getElementById('imgPreview_1').sheet.insertRule("#imgPreview_1::before{color:blue;}", 0);
+    }
+    reader.readAsDataURL(croppedFile);
+  }
   async function call() {
     console.log(fileRef_1.current);
     console.log(fileRef_2.current);
@@ -48,26 +57,35 @@ function Morph() {
     <div>
       <div className="wrapper">
         {/* Image 1 */}
-        <div className="box m-5" onclick="call()">
-          <div className="js--image-preview"></div>
+        <div className="box m-5" onClick={() => fileRef_1.current.trigger()}>
+          <div className="js--image-preview" data-text="photo_size_select_actual" id="imgPreview_1"></div>
           <div className="upload-options">
-            <label>
-            </label>
+            <label data-text="add"></label>
           </div>
         </div>
+        <HiddenCropper
+          triggerRef={fileRef_1}
+          onCropped={handleChange_1}
+          cropOptions={{ aspect: 1 / 1, maxZoom: 10 }}
+          outputOptions={{ maxWidth: 254, maxHeight: 254 }}
+          previewOptions={{ width: 254, height: 254 }}
+        />
         {/* Image 2 */}
-        <div className="box m-5" onclick="call()">
-          <div className="js--image-preview"></div>
+        <div className="box m-5" onClick={() => fileRef_2.current.trigger()}>
+          <div className="js--image-preview" data-text="photo_size_select_actual"></div>
           <div className="upload-options">
-            <label>
-            </label>
+            <label data-text="add"></label>
           </div>
         </div>
+        <HiddenCropper
+          triggerRef={fileRef_2}
+          cropOptions={{ aspect: 1 / 1, maxZoom: 10 }}
+          outputOptions={{ maxWidth: 254, maxHeight: 254 }}
+          previewOptions={{ width: 254, height: 254 }}
+        />
       </div>
 
-
-
-      <ImageCropper
+      {/* <ImageCropper
         fileRef={fileRef_1}
         // onChange={handleChange}
         cropOptions={{ aspect: 1 / 1, maxZoom: 10 }}
@@ -82,7 +100,7 @@ function Morph() {
         previewOptions={{ width: 254, height: 254 }}
       />
       <img id="imgResult" alt="" />
-      <button onClick={call}>Click</button>
+      <button onClick={call}>Click</button> */}
     </div>
   );
 }

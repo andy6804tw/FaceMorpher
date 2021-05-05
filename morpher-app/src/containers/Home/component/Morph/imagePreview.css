@@ -33,8 +33,8 @@
   .upload-options:hover {
     background-color: #ffa982;
   }
-  .upload-options label::after {
-    content: "add";
+  .upload-options label::before {
+    content: attr(data-text);
     font-family: "Material Icons";
     position: absolute;
     font-size: 2rem;
@@ -56,7 +56,7 @@
     background-size: cover;
   }
    .js--image-preview::after {
-    content: "photo_size_select_actual";
+    content: attr(data-text);
     font-family: "Material Icons";
     position: relative;
     font-size: 4.5em;

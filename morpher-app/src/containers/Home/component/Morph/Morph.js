@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import { toBase64, getSize, getCompressImage } from './compress';
 import './Morph.css';
+import './imagePreview.css'
 
 function Morph() {
   // if you don't care the onChange event, you can use a ref to retrieve the cropped file
@@ -45,6 +46,27 @@ function Morph() {
   }
   return (
     <div>
+      <div className="wrapper">
+        {/* Image 1 */}
+        <div className="box m-5" onclick="call()">
+          <div className="js--image-preview"></div>
+          <div className="upload-options">
+            <label>
+            </label>
+          </div>
+        </div>
+        {/* Image 2 */}
+        <div className="box m-5" onclick="call()">
+          <div className="js--image-preview"></div>
+          <div className="upload-options">
+            <label>
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+
       <ImageCropper
         fileRef={fileRef_1}
         // onChange={handleChange}

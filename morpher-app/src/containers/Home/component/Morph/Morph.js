@@ -71,6 +71,8 @@ function Morph() {
         console.log('done');
         document.getElementById('showResult').classList.remove('d-none');
         document.getElementById('imgResult').style.backgroundImage = `url(data:image/jpg;base64,${imgResult})`;
+        document.getElementById('morphButton').setAttribute('data-text','replay');
+        document.getElementById('morphButton').innerHTML=`\u00A0\u00A0 Try Again \u00A0\u00A0`;
       },
         (error) => {
           // var message = error.response.data.message;
@@ -118,7 +120,7 @@ function Morph() {
         </div>
       </div>
       <div className="text-center">
-      <button className="button-morph d-none animate__animated animate__heartBeat" id="morphButton" onClick={call}> {'\u00A0\u00A0'}Start{'\u00A0\u00A0'} </button>
+      <button className="button-morph animate__animated animate__heartBeat d-none" id="morphButton" data-text="" onClick={call}> {'\u00A0\u00A0'}Start{'\u00A0\u00A0'} </button>
       {/* <button type="button" class="btn btn-warning" onClick={call}>Click</button> */}
         </div>
       {/* <ImageCropper

@@ -86,7 +86,6 @@
     border:1px solid #ff7b3e;
     border-radius:100px;
     padding: .3em 1.2em;
-    margin:5px;
     font-size: 18px;
     background-size: 200% 100%;	
     background-image: linear-gradient(to right, transparent 50%, #ff7b3e 50%);
@@ -98,5 +97,9 @@
     background-color: #ff7b3e;
     background-position: -100% 100%;
     cursor: pointer;
+  }
+  button.button-morph::after{
+    content: attr(data-text);
+    font-family: "Material Icons";
   }
   button.button-morph:focus {outline:0 !important;}

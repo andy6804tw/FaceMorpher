@@ -78,7 +78,7 @@
   }
 
   /* Submit Button */
-  a.button-morph{
+  button.button-morph{
     display:inline-block;
     text-decoration:none;
     color:#ff7b3e;
@@ -91,10 +91,12 @@
     background-size: 200% 100%;	
     background-image: linear-gradient(to right, transparent 50%, #ff7b3e 50%);
     transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+    cursor: pointer;
   }
-  
-  a.button-morph:hover{
+  button.button-morph:hover{
     color:rgba(255, 255, 255, 1);
     background-color: #ff7b3e;
     background-position: -100% 100%;
+    cursor: pointer;
   }
+  button.button-morph:focus {outline:0 !important;}

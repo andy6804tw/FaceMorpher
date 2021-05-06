@@ -118,7 +118,7 @@ function Morph() {
         </div>
       </div>
       <div className="text-center">
-      <a className="button-morph d-none animate__animated animate__heartBeat" id="morphButton" href="javascript:;" onClick={call}> {'\u00A0\u00A0'}Start{'\u00A0\u00A0'} </a>
+      <button className="button-morph d-none animate__animated animate__heartBeat" id="morphButton" onClick={call}> {'\u00A0\u00A0'}Start{'\u00A0\u00A0'} </button>
       {/* <button type="button" class="btn btn-warning" onClick={call}>Click</button> */}
         </div>
       {/* <ImageCropper

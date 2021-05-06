@@ -67,3 +67,12 @@
     z-index: 0;
     cursor: pointer;
   }
+  .upload-options .label_result{
+    position: absolute;
+    font-size: 1.25rem;
+    color: #e6e6e6;
+    top: calc(50% - 1rem);
+    left: calc(50% - 1.5rem);
+    z-index: 0;
+    cursor: pointer;
+  }

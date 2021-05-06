@@ -11,7 +11,7 @@ function Morph() {
   // if you don't care the onChange event, you can use a ref to retrieve the cropped file
   const fileRef_1 = useRef();
   const fileRef_2 = useRef();
-
+  
   function handleChange_1(croppedFile) {
     console.log(fileRef_1.current);
     let reader = new FileReader();
@@ -36,6 +36,10 @@ function Morph() {
     }
     reader.readAsDataURL(croppedFile);
   }
+  function cal(){
+    document.getElementById('imgResult').style.backgroundImage = `url('https://i.imgur.com/u88PcD5.gif')`;
+  }
+  
   async function call() {
     console.log(fileRef_1.current);
     console.log(fileRef_2.current);
@@ -95,8 +99,15 @@ function Morph() {
           outputOptions={{ maxWidth: 254, maxHeight: 254 }}
           previewOptions={{ width: 254, height: 254 }}
         />
+        {/* Resilt Image */}
+        <div className="box m-5">
+          <div className="js--image-preview" data-text="" id="imgResult"></div>
+          <div className="upload-options">
+            <label className="label_result">Result</label>
+          </div>
+        </div>
       </div>
-
+      <button onClick={cal}>Click</button>
       {/* <ImageCropper
         fileRef={fileRef_1}
         // onChange={handleChange}

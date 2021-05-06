@@ -15,7 +15,6 @@ function Morph() {
   function handleChange_1(croppedFile) {
     console.log(fileRef_1.current);
     let reader = new FileReader();
-
     reader.onload = function() {
       console.log(document.getElementById('imgPreview_1').style)
       document.getElementById('imgPreview_1').style.backgroundImage = 'url(' + reader.result + ')';
@@ -23,6 +22,17 @@ function Morph() {
       document.getElementById('imgStatus_1').setAttribute('data-text','edit');
       // document.getElementById('imgPreview_1').style.setProperty('--content','');
       // document.getElementById('imgPreview_1').sheet.insertRule("#imgPreview_1::before{color:blue;}", 0);
+    }
+    reader.readAsDataURL(croppedFile);
+  }
+  function handleChange_2(croppedFile) {
+    console.log(fileRef_2.current);
+    let reader = new FileReader();
+    reader.onload = function() {
+      console.log(document.getElementById('imgPreview_2').style)
+      document.getElementById('imgPreview_2').style.backgroundImage = 'url(' + reader.result + ')';
+      document.getElementById('imgPreview_2').setAttribute('data-text','');
+      document.getElementById('imgStatus_2').setAttribute('data-text','edit');
     }
     reader.readAsDataURL(croppedFile);
   }
@@ -73,13 +83,14 @@ function Morph() {
         />
         {/* Image 2 */}
         <div className="box m-5" onClick={() => fileRef_2.current.trigger()}>
-          <div className="js--image-preview" data-text="photo_size_select_actual"></div>
+          <div className="js--image-preview" data-text="photo_size_select_actual" id="imgPreview_2"></div>
           <div className="upload-options">
-            <label data-text="add"></label>
+            <label data-text="add" id="imgStatus_2"></label>
           </div>
         </div>
         <HiddenCropper
           triggerRef={fileRef_2}
+          onCropped={handleChange_2}
           cropOptions={{ aspect: 1 / 1, maxZoom: 10 }}
           outputOptions={{ maxWidth: 254, maxHeight: 254 }}
           previewOptions={{ width: 254, height: 254 }}

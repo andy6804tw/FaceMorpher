@@ -153,7 +153,7 @@ def base64_cv2(base64_str):
 def image_to_video(insertValues, filename):
     # config
     videoPath='app/static/'+filename+'.gif'
-    nframes=8
+    nframes=10
     fps=4
     writer = imageio.get_writer(videoPath, fps=fps)
     # writer = imageio.get_writer(videoPath)

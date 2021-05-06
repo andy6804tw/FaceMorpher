@@ -12,7 +12,7 @@
     display: block;
     min-width: 254px;
     height: 290px;
-    margin: 10px;
+    margin-bottom: 25px !important;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -75,4 +75,26 @@
     left: calc(50% - 1.5rem);
     z-index: 0;
     cursor: pointer;
+  }
+
+  /* Submit Button */
+  a.button-morph{
+    display:inline-block;
+    text-decoration:none;
+    color:#ff7b3e;
+    background-color:transparent;
+    border:1px solid #ff7b3e;
+    border-radius:100px;
+    padding: .3em 1.2em;
+    margin:5px;
+    font-size: 18px;
+    background-size: 200% 100%;	
+    background-image: linear-gradient(to right, transparent 50%, #ff7b3e 50%);
+    transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+  }
+  
+  a.button-morph:hover{
+    color:rgba(255, 255, 255, 1);
+    background-color: #ff7b3e;
+    background-position: -100% 100%;
   }

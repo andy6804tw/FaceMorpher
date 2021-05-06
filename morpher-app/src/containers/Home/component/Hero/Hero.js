@@ -24,7 +24,7 @@ class Hero extends Component {
                                         <p>Morphing your face!</p><br />
                                     </div>
                                     <div className="animate__animated animate__fadeInUp animate__delay-1s">
-                                        <a className="museum-shop-link" href="#">Get started
+                                        <a className="museum-shop-link" href="#imgPreview_1">Get started
                                 {'\u00A0\u00A0'} <i className="fas fa-angle-right fa-lg"></i>
                                         </a>
                                     </div>

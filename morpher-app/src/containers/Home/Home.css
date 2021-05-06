@@ -37,6 +37,7 @@ a {
 }
 
 .content{
-  height: 800px;
+  /* height: 800px; */
   background-color: antiquewhite;
+  padding-bottom: 40px;
 }

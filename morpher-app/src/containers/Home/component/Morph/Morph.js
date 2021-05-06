@@ -25,6 +25,7 @@ function Morph() {
       // document.getElementById('imgPreview_1').sheet.insertRule("#imgPreview_1::before{color:blue;}", 0);
     }
     reader.readAsDataURL(croppedFile);
+    checkUploadDone();
   }
   function handleChange_2(croppedFile) {
     file_2=croppedFile;
@@ -36,6 +37,12 @@ function Morph() {
       document.getElementById('imgStatus_2').setAttribute('data-text','edit');
     }
     reader.readAsDataURL(croppedFile);
+    checkUploadDone();
+  }
+  function checkUploadDone(){
+    if(file_1&&file_2){
+      document.getElementById('morphButton').classList.remove('d-none');
+    }
   }
   function cal(){
     document.getElementById('imgResult').style.backgroundImage = `url('https://i.imgur.com/u88PcD5.gif')`;
@@ -110,7 +117,10 @@ function Morph() {
           </div>
         </div>
       </div>
-      <button onClick={call}>Click</button>
+      <div className="text-center">
+      <a className="button-morph d-none animate__animated animate__heartBeat" id="morphButton" href="javascript:;" onClick={call}> {'\u00A0\u00A0'}Start{'\u00A0\u00A0'} </a>
+      {/* <button type="button" class="btn btn-warning" onClick={call}>Click</button> */}
+        </div>
       {/* <ImageCropper
         fileRef={fileRef_1}
         // onChange={handleChange}

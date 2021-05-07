@@ -67,7 +67,7 @@
     z-index: 0;
     cursor: pointer;
   }
-  .upload-options .label_result{
+  /* .upload-options .label_result{
     position: absolute;
     font-size: 1.25rem;
     color: #e6e6e6;
@@ -75,7 +75,7 @@
     left: calc(50% - 1.5rem);
     z-index: 0;
     cursor: pointer;
-  }
+  } */
 
   /* Submit Button */
   button.button-morph{

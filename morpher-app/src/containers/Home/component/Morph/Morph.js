@@ -27,6 +27,9 @@ function Morph() {
     reader.readAsDataURL(croppedFile);
     checkUploadDone();
   }
+  function cal(){
+    document.getElementById('imgResult').style.backgroundImage = `url('https://i.imgur.com/u88PcD5.gif')`;
+  }
   function handleChange_2(croppedFile) {
     file_2=croppedFile;
     console.log(fileRef_2.current);
@@ -44,20 +47,19 @@ function Morph() {
       document.getElementById('morphButton').classList.remove('d-none');
     }
   }
-  function cal(){
-    document.getElementById('imgResult').style.backgroundImage = `url('https://i.imgur.com/u88PcD5.gif')`;
-  }
-  
-  async function call() {
+  function refreshPage(){
+    window.location.reload();
+} 
+  async function handleMorph() {
     console.log(file_1);
     console.log(file_2);
     const base64Image_1 = await toBase64(file_1);
-    // const sizeImage_1 = await getSize(fileRef_1.current);
+    const sizeImage_1 = await getSize(file_1);
     // const base64ImageCompress_1 = await getCompressImage(fileRef_1.current, sizeImage_1, base64Image_1);
     const base64Image_2 = await toBase64(file_2);
-    // const sizeImage_2 = await getSize(fileRef_2.current);
+    const sizeImage_2 = await getSize(file_2);
     // const base64ImageCompress_2 = await getCompressImage(fileRef_2.current, sizeImage_2, base64Image_2);
-
+    console.log(sizeImage_1, sizeImage_2)
     axios.post(` http://127.0.0.1:5000/morph`, {
       image1: base64Image_1.split(',')[1],
       image2: base64Image_2.split(',')[1]
@@ -71,8 +73,8 @@ function Morph() {
         console.log('done');
         document.getElementById('showResult').classList.remove('d-none');
         document.getElementById('imgResult').style.backgroundImage = `url(data:image/jpg;base64,${imgResult})`;
-        document.getElementById('morphButton').setAttribute('data-text','replay');
-        document.getElementById('morphButton').innerHTML=`\u00A0\u00A0 Try Again \u00A0\u00A0`;
+        document.getElementById('morphButton').classList.add('d-none');
+        document.getElementById('replayButton').classList.remove('d-none');
       },
         (error) => {
           // var message = error.response.data.message;
@@ -115,12 +117,13 @@ function Morph() {
         <div className="box m-5 d-none" id="showResult">
           <div className="js--image-preview" data-text="" id="imgResult"></div>
           <div className="upload-options">
-            <label className="label_result">Result</label>
+            <label className="label_result" id="labelResult" data-text="download"></label>
           </div>
         </div>
       </div>
       <div className="text-center">
-      <button className="button-morph animate__animated animate__heartBeat d-none" id="morphButton" data-text="" onClick={call}> {'\u00A0\u00A0'}Start{'\u00A0\u00A0'} </button>
+      <button className="button-morph animate__animated animate__heartBeat d-none" id="morphButton" data-text="" onClick={handleMorph}> {'\u00A0\u00A0'}Start{'\u00A0\u00A0'} </button>
+      <button className="button-morph animate__animated animate__heartBeat d-none" id="replayButton" data-text="replay" onClick={refreshPage}> {'\u00A0\u00A0'}Try Again{'\u00A0\u00A0'} </button>
       {/* <button type="button" class="btn btn-warning" onClick={call}>Click</button> */}
         </div>
       {/* <ImageCropper

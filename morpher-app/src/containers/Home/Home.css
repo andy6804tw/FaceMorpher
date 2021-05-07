@@ -37,7 +37,7 @@ a {
 }
 
 .content{
-  height: calc(51vh);
+  min-height: 51vh;
   background-color: antiquewhite;
   padding-bottom: 40px;
 }

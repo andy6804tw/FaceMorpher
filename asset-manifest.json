@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/FaceMorpher/static/css/main.cc2f897d.chunk.css",
-    "main.js": "/FaceMorpher/static/js/main.0041c115.chunk.js",
-    "main.js.map": "/FaceMorpher/static/js/main.0041c115.chunk.js.map",
+    "main.css": "/FaceMorpher/static/css/main.f4c447da.chunk.css",
+    "main.js": "/FaceMorpher/static/js/main.4f2c34c6.chunk.js",
+    "main.js.map": "/FaceMorpher/static/js/main.4f2c34c6.chunk.js.map",
     "runtime-main.js": "/FaceMorpher/static/js/runtime-main.1a0706c3.js",
     "runtime-main.js.map": "/FaceMorpher/static/js/runtime-main.1a0706c3.js.map",
     "static/js/2.e7b9d590.chunk.js": "/FaceMorpher/static/js/2.e7b9d590.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.c886b1a5.chunk.js": "/FaceMorpher/static/js/3.c886b1a5.chunk.js",
     "static/js/3.c886b1a5.chunk.js.map": "/FaceMorpher/static/js/3.c886b1a5.chunk.js.map",
     "index.html": "/FaceMorpher/index.html",
-    "static/css/main.cc2f897d.chunk.css.map": "/FaceMorpher/static/css/main.cc2f897d.chunk.css.map",
+    "static/css/main.f4c447da.chunk.css.map": "/FaceMorpher/static/css/main.f4c447da.chunk.css.map",
     "static/js/2.e7b9d590.chunk.js.LICENSE.txt": "/FaceMorpher/static/js/2.e7b9d590.chunk.js.LICENSE.txt",
     "static/media/demo1.gif": "/FaceMorpher/static/media/demo1.6d53cd57.gif",
     "static/media/demo2.gif": "/FaceMorpher/static/media/demo2.4f2b5e65.gif"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.1a0706c3.js",
     "static/js/2.e7b9d590.chunk.js",
-    "static/css/main.cc2f897d.chunk.css",
-    "static/js/main.0041c115.chunk.js"
+    "static/css/main.f4c447da.chunk.css",
+    "static/js/main.4f2c34c6.chunk.js"
   ]
 }

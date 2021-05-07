@@ -41,3 +41,7 @@ a {
   background-color: antiquewhite;
   padding-bottom: 40px;
 }
+
+.modal-open{
+  background-color: transparent;
+}

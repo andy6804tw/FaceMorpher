@@ -1,0 +1,134 @@
+.wrapper{
+  width: 300px;
+  margin: auto;
+  padding-top: 20px;
+  position: reletive;
+}
+.centered {
+  position: absolute; 
+  top: 45%;
+  left: 45%;
+}
+#smileyFace{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  cursor: pointer;
+}
+#smileyFace p{
+  text-align: center;
+  font-size: 1.3em;
+  color:  orange;
+  position: relative;
+  top: 25px;
+  left:  10px;
+  animation-name: hide;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+.mouth{
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  border: 10px solid orange;
+  border-bottom: none;
+  animation-fill-mode: forwards;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+}
+.left{
+  transform-origin: center bottom;
+  transform: rotate(90deg);
+ animation-name: spin_left;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+.right{
+  transform-origin: center bottom;
+  transform: rotate(-90deg);
+  animation-name: spin_right;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.eyes{
+  opacity: 0;
+  animation-name: show;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+.eyes:before, .eyes:after{
+  position: absolute;
+  content:" ";
+  padding: 6px 6px;
+  background-color: orange;
+  border-radius: 10px;
+}
+.eyes:before{
+  top: 35px;
+  left: 20px;
+}
+.eyes:after{
+  top:35px;
+  left: 90px;
+}
+@keyframes spin_left{
+    0% {
+        transform:rotate(-90deg);
+    }
+    80% {
+        transform:rotate(540deg);
+    }
+    100% {
+        transform:rotate(540deg);
+    }
+}
+@keyframes spin_right{
+    0% {
+        transform:rotate(90deg);
+    }
+    80% {
+        transform:rotate(540deg);
+    }
+    100% {
+        transform:rotate(540deg);
+    }
+}
+@keyframes show{
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes hide{
+  0%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 1;
+  }
+  66%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+

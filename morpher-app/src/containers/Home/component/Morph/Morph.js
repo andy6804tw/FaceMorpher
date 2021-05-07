@@ -51,6 +51,7 @@ function Morph() {
     window.location.reload();
 } 
   async function handleMorph() {
+    document.getElementById('loading').classList.remove('d-none');
     console.log(file_1);
     console.log(file_2);
     const base64Image_1 = await toBase64(file_1);
@@ -75,6 +76,7 @@ function Morph() {
         document.getElementById('imgResult').style.backgroundImage = `url(data:image/jpg;base64,${imgResult})`;
         document.getElementById('morphButton').classList.add('d-none');
         document.getElementById('replayButton').classList.remove('d-none');
+        document.getElementById('loading').classList.add('d-none');
       },
         (error) => {
           // var message = error.response.data.message;

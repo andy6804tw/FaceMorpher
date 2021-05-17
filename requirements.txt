@@ -7,3 +7,6 @@ dlib
 scipy
 opencv-contrib-python
 gunicorn
+
+skimage
+imutils

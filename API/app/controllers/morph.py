@@ -5,7 +5,6 @@ from datetime import datetime
 import base64
 import config
 # import app.modules.morph as morphModule
-import cv2
 
 morph = Blueprint('morph',__name__)
   

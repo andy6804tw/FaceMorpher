@@ -1,4 +1,4 @@
-DEBUG = True
+DEBUG = False
 PORT=5000
 ENV='development'
 SECRET_KEY = 'files'

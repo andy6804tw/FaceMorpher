@@ -1,4 +1,4 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://novel-coronavirus-2019.herokuapp.com/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://face-morpher.herokuapp.com/)
 # FaceMorpher
 
 ## API

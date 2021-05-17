@@ -61,7 +61,7 @@ function Morph() {
     const sizeImage_2 = await getSize(file_2);
     // const base64ImageCompress_2 = await getCompressImage(fileRef_2.current, sizeImage_2, base64Image_2);
     console.log(sizeImage_1, sizeImage_2)
-    axios.post(` http://127.0.0.1:5000/morph`, {
+    axios.post(`https://face-morpher.herokuapp.com/morph`, {
       image1: base64Image_1.split(',')[1],
       image2: base64Image_2.split(',')[1]
       // image: base64Image.split(',')[1]

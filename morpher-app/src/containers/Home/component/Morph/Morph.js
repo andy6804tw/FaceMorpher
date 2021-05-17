@@ -71,7 +71,7 @@ function Morph() {
         // POST success
         const filename = dataObject.filename;
         const imgResult = dataObject.result.split("'")[1];
-        console.log('done');
+        console.log('done',filename);
         document.getElementById('showResult').classList.remove('d-none');
         document.getElementById('imgResult').style.backgroundImage = `url(data:image/jpg;base64,${imgResult})`;
         document.getElementById('morphButton').classList.add('d-none');

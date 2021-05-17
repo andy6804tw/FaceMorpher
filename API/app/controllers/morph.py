@@ -12,8 +12,10 @@ morph = Blueprint('morph',__name__)
 @morph.route('', methods=['GET','POST'])
 def add():
   if request.method == 'GET':
-    morphModule.image_to_video('')
-    return jsonify({'result': 'call GET from /morph'})
+    morphModule.image_to_video('', 'test')
+    with open('app/static/test.gif', "rb") as image_file:
+      encoded_string = base64.b64encode(image_file.read())
+      return jsonify({'filename':'test', 'result': str(encoded_string)})
   else:
     insertValues = request.get_json()
     image1=insertValues['image1']

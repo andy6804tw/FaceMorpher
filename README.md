@@ -1,6 +1,8 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://face-morpher.herokuapp.com/)
 # FaceMorpher
 
+![](./screenshot/demo.gif)
+
 ## API
 Deploy on Heroku. More detail you can see at API Doc.
 

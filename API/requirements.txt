@@ -5,3 +5,6 @@ opencv-python
 matplotlib
 dlib
 gunicorn
+
+skimage
+imutils

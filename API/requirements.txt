@@ -6,5 +6,5 @@ matplotlib
 dlib
 gunicorn
 
-skimage
+scikit-image
 imutils

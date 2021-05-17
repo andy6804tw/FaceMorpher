@@ -8,5 +8,5 @@ scipy
 opencv-contrib-python
 gunicorn
 
-skimage
+scikit-image
 imutils
